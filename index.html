@@ -6,22 +6,18 @@
             margin:0px;
             padding:0px;
         }
-
         #header{
             margin:auto;
             width:1500px;
             font-family:Arial, Helvetica, sans-serif;
         }
-
         ul, ol{
             list-style:none;
         }
-
         body{
             background-color:FAE7A5;
         }
-
-         .menu {
+        .menu {
             background: #F9B872;
             padding: 15px;
             position: fixed;
@@ -37,22 +33,35 @@
             color: white;
             text-decoration: none;
             font-weight: bold;
+            font-size: 20px;
             }
-
         .contenedor {
-      background: white;
-      width: 320px;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            background: white;
+            width: 320px;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
         }
 
         
-    .contenedor h2 {
-      margin-bottom: 20px;
-      color: #333;
+    .contenedor table {
+        background: white;
+        width: 320px;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.2);
     }
-
+    .imagen{
+        width: 500px;
+        height: 400px;
+        margin: 70px 0 0 10px;
+    }
+    .imagen, .contenedor{
+        display: inline-block;
+    }
+    li {
+        font-size: 20px;
+    }
     </style>
 </head>
 
@@ -78,16 +87,14 @@
     redemodelaciones en el sistema de empaquetado por parte del Señor House prometen estabilizar la situacion.
 </marquee>    
 <hr>
-  <table border="0">
-    <tr>
     <div class="contenedor">
     <h2>Quienes somos:</h2>
-   <td><P>Somos un grupo de estudiantes buscando consientizar sobre el cuidado
+    <P>Somos un grupo de estudiantes buscando consientizar sobre el cuidado
            de nuestros compañeros de vida, las mascotas.
            Nuestro objetivo es enseñar consejos basicos pero indispensables para el cuidado 
            de animales domesticos tales como los perros y los gatos.
            Ofrecemos consejos y guia para temas variados tales como:</P>
-<dl>
+<ul>
             <li>
             <U><B>Adopcion.</B></U>
             </li>
@@ -97,14 +104,10 @@
             <Li>
             <U><B>Alimentacion para perros y gatos.</B></U>
             </Li>
-        </dl>
-</td>
+        </ul>
+    </P>
 </div>
-    </P></td>
-    <td><img src="https://cdn.unotv.com/images/2024/05/amigo-174756-1024x576.jpg" height="350" width="650">
-    </td>
-</tr>
-  </table>
+    <div class="imagen"><img class="imagen" src="https://cdn.unotv.com/images/2024/05/amigo-174756-1024x576.jpg"></div>
 </font>
 </body>
 </html>

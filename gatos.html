@@ -2,9 +2,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Cuidado de gatos</title></head>
-        <style type="text/css">
+       <style type="text/css">
         *{
             margin:0px;
             padding:0px;
@@ -20,80 +19,44 @@
             list-style:none;
         }
 
-        .nav{
-            width:500px;   /*establecemos un ancho*/
-            margin:0 auto; /*centramos automaticamente*/
-        }
-
-        .nav li{
-            float:left;
-        }
-
-        .nav li a{
-            background-color:#000;
-            color:#fff;
-            text-decoration:none;
-            padding:10px 12px;
-            display:block;
-        }
-
-        .nav li a:hover{
-            background-color:#434343;
-        }
-
-        .nav li ul{
-            display:none;
-            position:absolute;
-            min-width:140px;
-        }
-
-        .nav li:hover > ul{
-            display:block;
-        }
-
-        .nav li ul li{
-            position:relative;
-        }
-
-        .nav li ul li ul{
-            right:-140px;
-            top:0px;
-        }
         body{
-            background-color:FCCE44;
+            background-color:FAE7A5;
         }
+
+         .menu {
+            background: #F9B872;
+            padding: 15px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        .menu ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            }
 
     </style>
 <body>
 <font face="sans-serif">
-    <div id="header">
-    <!-- Aqui estamos iniciando la nueva etiqueta nav -->
-    <ul class="nav">
+      <header class="menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="">Adopta aquí</a></li>
+                    <li><a href="alimentacion.html">Alimentación</a></li>
+                    <li><a href="">Cuidados para gatos</a></li>
+                    <li><a href="">Cuidado para perros</a></li>
+                    <li><a href="">Comentarios y opiniones</a></li>
+                    <li><a href="">Inicia sesion</a></li>
+                </ul>
+            </header>
 
-        <li><a href="index.html">Principal</a></li>
-        <li><a href="adopcion.html">Adopcion</a></li>
-
-        <li><a href="">Cuidados</a>
-            <ul>
-                <li><a href="perro.html">cuidados sobre perros</a></li>
-
-                <li><a href="gatos.html">Cuidados sobre gatos</a></li>
-            </ul>
-
-        <li><a href="">Alimentacion</a>
-            <ul>
-                <li><a href="Alimentaciongato.html">De los gatos</a></li>
-
-                <li><a href="alimentacionperro.html">De los perros</a></li>
-            </ul>
-        </li>
-
-        <li><a href="satisfaccion.html">Formulario de satisfaccion.</a></li>
-
-    </ul>
-</div>
-
-<br><br><br><br><br>
+<br><br><br>
     <center><h1>Acerca de la adopción</h1></center>
     <hr>
     <marquee>Se busca gente dispuesta a adoptar, mas informacion en la pagina de adopcion!,
