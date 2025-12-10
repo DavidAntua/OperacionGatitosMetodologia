@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de Satisfacción</title>
+     <style type="text/css">
+        *{
+            margin:0px;
+            padding:0px;
+        } 
+        #header{
+            margin:auto;
+            width:1500px;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        ul, ol{
+            list-style:none;
+        }
+        body{
+            background-color:#FAE7A5;
+
+        }
+        .menu {
+            background: #F9B872;
+            padding: 15px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        .menu ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+            }
+
+        .box {
+      background: white;
+      width: 320px;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+    
+      .box h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+    
+      .box input {
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: #f1f1f1;
+
+    }
+
+        .box button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: #e09146;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+                </style>
+</head>
+
+<body>
+    <font face="sans-serif">
+      <header class="menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="">Adopta aquí</a></li>
+                    <li><a href="alimentacion.html">Alimentación</a></li>
+                    <li><a href="">Cuidados para gatos</a></li>
+                    <li><a href="">Cuidado para perros</a></li>
+                    <li><a href="">Comentarios y opiniones</a></li>
+                    <li><a href="">Inicia sesion</a></li>
+                </ul>
+            </header>
+
+<br><br><br>
+    <div class="box">
+        <h1>Tu opinión es importante para nosotros</h1>
+        <p>Por favor, tómate un momento para calificar tu experiencia.</p>
+        
+        <form action="/enviar_encuesta" method="POST">
+            <div class="form-group">
+                <label>¿Qué tan satisfecho estás con nuestro servicio general?</label>
+                <div class="rating">
+                    <input type="radio" id="st5" name="rating" value="5" /><label for="st5">⭐ Excelente</label>
+                    <input type="radio" id="st4" name="rating" value="4" /><label for="st4">⭐ Bien</label>
+                    <input type="radio" id="st3" name="rating" value="3" /><label for="st3">⭐ Regular</label>
+                    <input type="radio" id="st2" name="rating" value="2" /><label for="st2">⭐ Mal</label>
+                    <input type="radio" id="st1" name="rating" value="1" /><label for="st1">⭐ Muy mal</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="comentarios">Comentarios adicionales (opcional):</label>
+                <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+            </div>
+
+            <button type="submit">Enviar opinión</button>
+        </form>
+    </div>
+</body>
+</html>
