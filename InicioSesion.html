@@ -95,6 +95,7 @@
       if (correo === usuarioValido && password === passwordValido) {
         mensaje.style.color = "green";
         mensaje.textContent = "Inicio de sesión exitoso";
+        window.location.href = 'index.html';
       } else {
         mensaje.style.color = "red";
         mensaje.textContent = "Datos incorrectos";
