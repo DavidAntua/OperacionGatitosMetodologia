@@ -1,44 +1,97 @@
 <html>
-    <head><title>cuidado del perro</title>
+    <head><title>Cuidados Para Perros</title>
         <style type="text/css">
-        *{
-            margin:0px;
-            padding:0px;
-        }
-
         #header{
             margin:auto;
             width:1500px;
             font-family:Arial, Helvetica, sans-serif;
         }
-
-        ul, ol{
-            list-style:none;
-        }
-
         body{
             background-color:FAE7A5;
+            margin: 0;
+        }
+.menu {
+    background: #F9B872;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+    .card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 0.8rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
 
-         .menu {
-            background: #F9B872;
-            padding: 15px;
-            position: fixed;
+        .card {
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
             top: 0;
-            width: 100%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.9);
+            z-index: 1;
+            transition: opacity 0.3s ease;
         }
-        .menu ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-        .menu a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 20px;
-            }
 
+        .card:hover::before {
+            opacity: 0.8;
+        }
+
+        .card > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .card h4 {
+            color: #000000;
+            margin-bottom: 0.75rem;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            font-weight: 600;
+        }
+
+        .card p {
+            color: #000000;
+            font-size: clamp(0.85rem, 2vw, 1rem);
+        }
+        ul.circulos {
+    list-style-type: circle;
+}
+ul, ol {
+    padding-left: 40px;
+}
     </style>
     </head>
     <body>
@@ -46,7 +99,7 @@
       <header class="menu">
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
-                    <li><a href="">Adopta aquí</a></li>
+                    <li><a href="adopcion.html">Adopta aquí</a></li>
                     <li><a href="alimentaciongato.html">Alimentación</a></li>
                     <li><a href="gatos.html">Cuidados para gatos</a></li>
                     <li><a href="perro.html">Cuidado para perros</a></li>
@@ -56,24 +109,66 @@
             </header>
 
 <br><br><br>
-        <h1><center>Cuidado del Perro</center></h1>
+        <h1><center>Cuidados para perros</center></h1>
         <hr>
-        <marquee>En esta seccion encontraras unas recomendaciones de 
+        <marquee><h3>En esta seccion encontraras unas recomendaciones de 
                  como cuidar a tu mascota y tener mas cuidado en el como cuidarlo y mantenerlo. Cuidadano
                 local reporta ver a su perro comiendo cereal con una cuchara, afirma que es comportamiento comun
-                pero le preocupa que las Zucaritas le hagan daño en su estomago.</marquee>
+                pero le preocupa que las Zucaritas le hagan daño en su estomago.</h3></marquee>
         <hr>
             <table>
             <tr>
-            <td><ul>
+            <td>
+            <h2>Cuidados esenciales de los perros:</h2>
+            <div class="card"><ul>
             <li>Ejercicio regular: Los perros necesitan ejercicio diario para mantenerse saludables y felices. Asegúrate de sacarlo a pasear varias veces al día y jugar con él para quemar energía y fortalecer vuestro vínculo.
             <li>Visitas al veterinario: Lleva a tu perro al veterinario para chequeos regulares, vacunaciones y desparasitaciones. Esto ayudará a prevenir enfermedades y mantenerlo en buen estado de salud.
             <li>Higiene y cuidado personal: Cepilla el pelaje de tu perro regularmente para evitar enredos y mantener su piel saludable. También es importante bañarlo según sea necesario y cuidar sus uñas, oídos y dientes.
             <li>Entrenamiento y socialización: Dedica tiempo a entrenar a tu perro en obediencia básica y socializarlo con otros perros y personas. Esto ayudará a prevenir problemas de comportamiento y asegurará que sea un compañero bien adaptado.
-            </ul></td>
-            <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGxwl4fhem6m2urbLPsROL7UHP2tjF4CowszALXe5IwDIMG7C2VdCqSyLCsNi4mrqWuKJgVE215SQCpX3TOTQSUgwhOnN_kBr2FB6omLvWww&s=10" height="300" width="280"></a></td>
+            </ul></div></td>
+            <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV5WP58-BUiTrINqGDTs1MuUZWxBFgy1NgfQ&s" height="300" width="380"></a></td>
             </tr>
             </table>
+            <table>
+            <hr>
+                <tr>
+                    <td>
+                    <h2>Alimentación equilibrada:</h2>
+                    <div class="card"><ul>
+                    <li><p>
+                    Una alimentación adecuada es fundamental para el desarrollo y la salud del perro. Su dieta debe ser balanceada y
+                    adaptada a su edad, tamaño, nivel de actividad y condición física. Los cachorros, los perros adultos y los perros
+                    mayores tienen necesidades nutricionales distintas. Es importante respetar las porciones recomendadas y evitar el exceso
+                    de comida, ya que el sobrepeso puede provocar problemas de salud. El acceso permanente a agua limpia y fresca es
+                    igualmente indispensable.
+                    </p></div></li>
+                    </ul>
+                    </td>
+                    <td><img src="https://www.aboutespanol.com/thmb/Ut9ErO_glqeZbt9PbxDjcGfRMtw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/JackRussellconplatodecomida-5ae37b9dff1b78003648113d.jpg"
+                            height="300" width="380"></a></td>
+                </tr>
+                </table>
+                <table>
+                <hr>
+                <tr>
+                    <td>
+                        <h2>Higiene y cuidado del pelaje</h2>
+                        <div class="card"><ul>
+                            <li>
+                                <p>
+                                    El cuidado del pelaje contribuye a la salud de la piel y al bienestar general del perro. El cepillado regular ayuda a
+                                    eliminar el pelo muerto, mantener el pelaje limpio y detectar posibles problemas como parásitos o irritaciones. La
+                                    frecuencia del baño depende del tipo de pelo y del estilo de vida del perro, pero debe realizarse con productos
+                                    específicos para mascotas, evitando el uso de jabones destinados a humanos.
+                                </p>
+                            </li>
+                        </ul>
+                    </div></td>
+                    <td><img src="https://imagenes.elpais.com/resizer/v2/6RAWZ3AZJBF35DSRFFB2FBZSQU.jpg?auth=6c98dd845c4893badbd491b97b8dfde8c086ad5952844c012fb4e36369389fdc&width=414"
+                            height="300" width="380"></a></td>
+                </tr>
+            </table>
+            </font>
 </font>
 </body>
 </html>

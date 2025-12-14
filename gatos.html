@@ -4,44 +4,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuidado de gatos</title></head>
        <style type="text/css">
-        *{
-            margin:0px;
-            padding:0px;
-        }
-
-        #header{
+               #header{
             margin:auto;
             width:1500px;
             font-family:Arial, Helvetica, sans-serif;
         }
-
-        ul, ol{
-            list-style:none;
-        }
-
         body{
             background-color:FAE7A5;
+            margin: 0;
+        }
+.menu {
+    background: #F9B872;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+    .card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 0.8rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
 
-         .menu {
-            background: #F9B872;
-            padding: 15px;
-            position: fixed;
+        .card {
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
             top: 0;
-            width: 100%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.9);
+            z-index: 1;
+            transition: opacity 0.3s ease;
         }
-        .menu ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-        .menu a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 20px;
-            }
 
+        .card:hover::before {
+            opacity: 0.8;
+        }
+
+        .card > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .card h4 {
+            color: #000000;
+            margin-bottom: 0.75rem;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            font-weight: 600;
+        }
+
+        .card p {
+            color: #000000;
+            font-size: clamp(0.85rem, 2vw, 1rem);
+        }
+        ul.circulos {
+    list-style-type: circle;
+}
+ul, ol {
+    padding-left: 40px;
+}
     </style>
 <body>
 <font face="sans-serif">
@@ -58,7 +111,7 @@
             </header>
 
 <br><br><br>
-    <center><h1>Cuidados para gatos</h1></center>
+    <center><h1>Cuidados para gatos</h1></center><br>
     <center><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOWKWMKumCGsugCp_XtZiRXMi5vxHMsB43JQ&s" alt="Gato Adoptado" height="232" width="600"></center>
     <hr>
     <marquee><h2>Se busca gente dispuesta a adoptar, mas informacion en la pagina de adopcion!,
@@ -67,25 +120,30 @@
     </marquee>
     <hr>
     <BR>
-    <div class="contenedor">
 <table>
 <tr>
 <td>
-    <p>Cuidar de un gato implica conocer sus necesidades básicas y ofrecerle un entorno seguro y enriquecido que favorezca
-su bienestar físico y emocional. La alimentación es uno de los pilares más importantes: los gatos requieren una dieta
-rica en proteínas de origen animal y nutrientes esenciales como la taurina, por lo que es recomendable elegir alimentos
-de calidad formulados específicamente para ellos. Además, suelen beber poca agua, por lo que colocar varios recipientes
-o una fuente puede ayudar a mantenerlos hidratados. Evitar darles comida casera o restos humanos también es
-fundamental, ya que muchos alimentos comunes para nosotros pueden ser tóxicos para ellos.</p><br>
+    <h2>INTRODUCCION</h2><br>
+<div class="card">
+    <p>Cuidar de un gato implica conocer sus necesidades básicas y ofrecerle un entorno seguro y enriquecido
+        que favorezca su bienestar físico y emocional.<br><br>
+        La alimentación es uno de los pilares más importantes:<br>
+        Los gatos requieren una dieta rica en proteínas de origen animal y nutrientes esenciales como la taurina, 
+        por lo que es recomendable elegir alimentos de calidad formulados específicamente para ellos.<br><br>
+        Además, suelen beber poca agua, por lo que colocar varios recipientes o una fuente puede ayudar a mantenerlos 
+        hidratados.<br><br>
+        Evitar darles comida casera o restos humanos también es fundamental, ya que muchos alimentos 
+        comunes para nosotros pueden ser tóxicos para ellos.</p><br>
 <p>¡Es momento de saber sobre estas futuras mascotas! Adoptar una conlleva una gran resposabilidad.
    Te enseñaremos como darle los cuidados correctos y te daremos consejos extra sobre ellos.
 </p>
+</div>
 </td>
-<td><img src="https://b282c5de4f50ed30d5ce-25e9f6b52714e6c3d4dbb7e330152014.ssl.cf3.rackcdn.com/immagegrabber_thumb_big/Unsplash-GtwiBmtJvaU.jpg" alt="Gato Adoptado" height="300" width="400"></tr></td>
-
-           
+<td><img src="https://b282c5de4f50ed30d5ce-25e9f6b52714e6c3d4dbb7e330152014.ssl.cf3.rackcdn.com/immagegrabber_thumb_big/Unsplash-GtwiBmtJvaU.jpg" alt="Gato Adoptado" height="300" width="400">
+</tr></td>
             <td>
-            <h2>FACTORES A TENER EN CUENTA</h2>
+            <h2>FACTORES A TENER EN CUENTA</h2><br>
+            <div class="card">
             <Dl>
             <li><b>Salud:</b> En primer lugar, la medicina preventiva es crucial. Esto implica establecer una relación continua con un veterinario de confianza. Debes programar revisiones médicas anuales obligatorias que incluyan las vacunas esenciales recomendadas según su estilo de vida y un control estricto de parásitos, tanto internos como externos.
             <li><b>Mantenimiento óptimo del arenero:</b> Adquiere un arenero que se adapte bien a sus dimensiones, sobre todo cuando tu gato ya haya alcanzado su etapa adulta. Colócalo en un lugar tranquilo, alejado de la zona de alimentación, bebida y relax.

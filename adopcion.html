@@ -2,66 +2,97 @@
 <head>
     <title>Adopcion</title>
     <style type="text/css">
-        *{
-            margin:0px;
-            padding:0px;
-        } 
         #header{
             margin:auto;
             width:1500px;
             font-family:Arial, Helvetica, sans-serif;
         }
-        ul, ol{
-            list-style:none;
-        }
         body{
             background-color:FAE7A5;
+            margin: 0;
         }
-        .menu {
-            background: #F9B872;
-            padding: 15px;
-            position: fixed;
-            top: 0;
-            width: 100%;
-        }
-        .menu ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-        .menu a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 20px;
-            }
-        .contenedor {
-            background: white;
-            width: 320px;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+.menu {
+    background: #F9B872;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+    .card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 0.8rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
 
-        
-    .contenedor table {
-        background: white;
-        width: 320px;
-        padding: 30px;
-        border-radius: 12px;
-        box-shadow: 0 0 20px rgba(0,0,0,0.2);
-    }
-    .embed{
-        width: 500px;
-        height: 400px;
-        margin: 70px 0 0 10px;
-    }
-    .embed, .contenedor{
-        display: inline-block;
-    }
-    li {
-        font-size: 20px;
-    }
+        .card {
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.9);
+            z-index: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        .card:hover::before {
+            opacity: 0.8;
+        }
+
+        .card > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .card h4 {
+            color: #000000;
+            margin-bottom: 0.75rem;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            font-weight: 600;
+        }
+
+        .card p {
+            color: #000000;
+            font-size: clamp(0.85rem, 2vw, 1rem);
+        }
+        ul.circulos {
+    list-style-type: circle;
+}
+ul, ol {
+    padding-left: 40px;
+}
     </style>
 
 <body>
@@ -79,19 +110,18 @@
             </header>
 
 <br><br><br>
-<center><h1>Operacion Gatito.</h1></center>
+<h1>
+    <center>Sobre la adopcion</center>
+</h1>
 <hr>
 <marquee>
 <h3>Gente dispuesta a adoptar, vayan a la pagina de adopcion... un momento... esta es la pagina de adopcion!</h3>
 </marquee>    
 <hr>
-<body>
-    <h1>
-        <center>Seccion De Adopcion</center>
-    </h1><br>
+    
     <p>¡Hola! Si estás pensando en darle un hogar a uno de nuestros peludos, te explico cómo es nuestro proceso de adopción,
     diseñado para asegurar que tanto tú como el animal encuentren la pareja perfecta.
-    </p><br>
+    </p>
     <table border="2">
         <tr>
             <td><img src="https://img.freepik.com/foto-gratis/perro-pug-aislado-sobre-fondo-blanco_2829-11416.jpg?semt=ais_hybrid&w=740&q=80"
@@ -142,15 +172,13 @@
             </td>
         </tr>
     </table>
-<br>
 <center><p>Adoptar una mascota es una de las decisiones más importantes y enriquecedoras que una persona o familia puede tomar.<br>
- Más
-allá de ofrecer un hogar a un animal que lo necesita, la adopción implica un compromiso de tiempo, dedicación y
+Más allá de ofrecer un hogar a un animal que lo necesita, la adopción implica un compromiso de tiempo, dedicación y
 responsabilidad. A continuación, te presentamos una guía completa sobre cómo funciona el proceso y qué debes considerar
-antes de llevar un compañero peludo a casa.</p></center><br>
+antes de llevar un compañero peludo a casa.</p></center>
 <hr>
 <h2>Reflexiona si estás listo para adoptar</h2>
-<p>
+<div class="card"><p>
 Antes de iniciar cualquier trámite, es fundamental evaluar si cuentas con las condiciones necesarias para cuidar
 adecuadamente a una mascota:
 </p>
@@ -160,34 +188,37 @@ adecuadamente a una mascota:
 <li>Espacio en tu hogar adecuado al tamaño y energía del animal.</li>
 <li>Compromiso a largo plazo, considerando que perros y gatos pueden vivir más de 12 años.</li>
 </ol>
+</div>
 <hr>
 <h2>Investiga y elige el tipo de mascota adecuado</h2>
-<p>Cada mascota tiene necesidades diferentes. Los refugios pueden orientarte sobre:</p>
+<div class="card"><p>Cada mascota tiene necesidades diferentes. Los refugios pueden orientarte sobre:</p>
 <ul>
     <li>Nivel de energía del perro o gato</li>
     <li>Tamaño y cuidados especiales</li>
     <li>Compatibilidad con niños, adultos mayores u otros animales</li>
     <li>Requerimientos médicos o de comportamiento</li>
 </ul>
+</div>
 <hr>
 <h2>Investiga y elige el tipo de mascota adecuado</h2>
-<p>Cada mascota tiene necesidades diferentes. Los refugios pueden orientarte sobre:</p>
+<div class="card"><p>Cada mascota tiene necesidades diferentes. Los refugios pueden orientarte sobre:</p>
 <ul>
     <li>Nivel de energía del perro o gato</li>
     <li>Tamaño y cuidados especiales</li>
     <li>Compatibilidad con niños, adultos mayores u otros animales</li>
     <li>Requerimientos médicos o de comportamiento</li>
 </ul>
+</div>
 <hr>
 <h2>Visita refugios, albergues o asociaciones</h2>
-<p>El siguiente paso es conocer a los animales disponibles. En los refugios:</p>
+<div class="card"><p>El siguiente paso es conocer a los animales disponibles. En los refugios:</p>
 <ul>
     <li>Observas su comportamiento real en un entorno seguro.</li>
     <li>Puedes interactuar con ellos para conocer su carácter.</li>
     <li>Recibes información detallada sobre su historia, estado de salud y necesidades.</li>
     <li>Muchos refugios tienen perfiles de cada mascota para ayudarte a tomar la mejor decisión.</li>
 </ul>
-</html>
+</div>
 </font>
 </body>
 </html>

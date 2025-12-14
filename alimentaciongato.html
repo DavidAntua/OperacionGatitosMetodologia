@@ -3,43 +3,97 @@
 <meta charset=utf-8>
     <title>Alimentacion de mascotas</title>
       <style type="text/css">
-        *{
-            margin:0px;
-            padding:0px;
-        }
-
         #header{
             margin:auto;
             width:1500px;
             font-family:Arial, Helvetica, sans-serif;
         }
-
-        ul, ol{
-            list-style:none;
-        }
-
         body{
             background-color:FAE7A5;
+            margin: 0;
+        }
+.menu {
+    background: #F9B872;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+    .card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 0.8rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
 
-         .menu {
-            background: #F9B872;
-            padding: 15px;
-            position: fixed;
+        .card {
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
             top: 0;
-            width: 100%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.9);
+            z-index: 1;
+            transition: opacity 0.3s ease;
         }
-        .menu ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
+
+        .card:hover::before {
+            opacity: 0.8;
         }
-        .menu a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 20px;
-            }
+
+        .card > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .card h4 {
+            color: #000000;
+            margin-bottom: 0.75rem;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            font-weight: 600;
+        }
+
+        .card p {
+            color: #000000;
+            font-size: clamp(0.85rem, 2vw, 1rem);
+        }
+        ul.circulos {
+    list-style-type: circle;
+}
+ul, ol {
+    padding-left: 40px;
+}
     </style>
 </head>
 <body>
@@ -47,14 +101,14 @@
       <header class="menu">
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
-                    <li><a href="">Adopta aquí</a></li>
+                    <li><a href="adopcion.html">Adopta aquí</a></li>
                     <li><a href="alimentaciongato.html">Alimentación</a></li>
                     <li><a href="gatos.html">Cuidados para gatos</a></li>
                     <li><a href="perro.html">Cuidado para perros</a></li>
                     <li><a href="satisfaccion.html">Comentarios y opiniones</a></li>
                     <li><a href="InicioSesion.html">Inicia sesion</a></li>
                 </ul>
-            </header>
+      </header>
 
 <br><br><br>
 <center><h1>Alimentacion para mascotas domesticas</h1></center>
@@ -73,33 +127,33 @@ Buscan 30 años de prision a todo aquel que acaricie demasiado fuerte a un gato,
         origen animal para mantener su metabolismo. Nutrientes como la <B>taurina</B>, el <B>ácido araquidónico</B> y la 
         <B>vitamina A</B> preformada son esenciales y solo se encuentran naturalmente en tejidos animales.</P>
         <h3>Tipos de alimentos disponibles</h3>
-        <P>Los alimentos comerciales para gatos suelen presentarse en tres categorías principales:</P>
+        <div class="card"><P>Los alimentos comerciales para gatos suelen presentarse en tres categorías principales:</P>
 <dl>
-            <dt>
-            <U><B>Alimento seco (croquetas)</B></U> Práctico y fácil de almacenar, 
+            <dt> <U><B>Alimento seco (croquetas)</B></U></dt> 
+            <dd>Práctico y fácil de almacenar, 
              ayuda a mantener la salud dental en cierta medida y 
              contiene menos humedad, por lo que no contribuye mucho a la hidratación.
-            </dt>
-            <dt>
-            <U><B>Alimento húmedo (latas o sobres)</B></U>
+            </dd>
+            <dt><U><B>Alimento húmedo (latas o sobres)</B></U></dt>
+            <dd>
             Aporta una mayor cantidad de agua,
             suele ser más apetecible para la mayoría de los gatos
             y es util para gatos con propensión a problemas urinarios o renales.
-            </dt>
-            <dt>
-            <U><B>Dieta mixta</B></U>
-            Combina ambos tipos y busca equilibrar practicidad, hidratación y variedad.
-            </dt>
+            </dd>
+            <dt><U><B>Dieta mixta</B></U></dt>
+            <dd>Combina ambos tipos y busca equilibrar practicidad, hidratación y variedad.</dd>
+            
 </dl>
             <i>Una alimentación adecuada a los gatos domésticos significa elegir un alimento 
             equilibrado y de calidad, asegurar una correcta hidratación y evitar riesgos innecesarios
             como dietas deficientes o productos tóxicos. Una nutrición correcta contribuye a una vida más 
             larga, saludable y activa para los felinos.</i>
-    </P></td>
-    <td><img src="https://i.redd.it/ptya5ruylsa61.jpg" height="150" width="250">
+    </P></div></td>
+    <td><br><br><br><br><br><br><img src="https://i.redd.it/ptya5ruylsa61.jpg" height="300" width="380">
     </td>
 </tr>
   </table>
+  <hr>
   <table border="0">
     <tr>
     <th><h2>Alimentación de los Perros:</h2></Th>
@@ -109,7 +163,7 @@ Buscan 30 años de prision a todo aquel que acaricie demasiado fuerte a un gato,
         energía y longevidad de los perros. Una dieta equilibrada aporta los nutrientes necesarios para el 
         buen funcionamiento del sistema inmunológico, el desarrollo muscular, la salud ósea y el bienestar general.</P>
         <h3>Nutrientes esenciales</h3>
-        <P>Un buen alimento para perros debe incluir:</P>
+        <div class="card"><P>Un buen alimento para perros debe incluir:</P>
 <dl>
             
             <dt><U><B>Proteínas:</B></U></dt> 
@@ -119,13 +173,13 @@ Buscan 30 años de prision a todo aquel que acaricie demasiado fuerte a un gato,
             <dt><U><B>Grasas saludables:</B></U></dt>
             <dd>Proporcionan energía y ayudan a mantener la piel y el pelaje saludables.</dd>
             <dt><U><B>Carbohidratos:</B></U></dt>
-            <dd> energía y favorecen la digestión cuando provienen de fuentes apropiadas.</dd>
+            <dd> Proveen energía y favorecen la digestión cuando provienen de fuentes apropiadas.</dd>
             
 </dl>
             <i>Consultar siempre al veterinario, cada perro es diferente; un veterinario puede recomendar
             la dieta más adecuada según sus características y estado de salud.</i>
-    </P></td>
-    <td><img src="https://blog.laikamascotas.cl/wp-content/uploads/2023/08/perro_comida_1600x900.jpg" height="150" width="250">
+    </P></div></td>
+    <td><br><br><br><br><br><img src="https://blog.laikamascotas.cl/wp-content/uploads/2023/08/perro_comida_1600x900.jpg" height="300" width="380">
     </td>
 </tr>
   </table>
