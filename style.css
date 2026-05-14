@@ -1,0 +1,126 @@
+body{
+    font-family: Arial, sans-serif;
+    background: #081209;
+    margin: 0;
+    padding: 0;
+    color: #15321A;
+}
+
+/* =========================
+   TÍTULOS
+========================= */
+h1, h2{
+    text-align: center;
+    color: #3F924B;
+    margin-top: 20px;
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+}
+
+/* =========================
+   CONTENEDOR FORMULARIOS
+========================= */
+form{
+    background: #CDEAD1;
+    width: 320px;
+    margin: 60px auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* INPUTS */
+input{
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+}
+
+input:focus{
+    border-color: #1f3c88;
+}
+
+/* BOTONES */
+button{
+    width: 95%;
+    padding: 10px;
+    background: #9E5EA8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover{
+    background: #16306b;
+}
+
+/* LINKS */
+a{
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #1f3c88;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+/* =========================
+   SISTEMA LIBROS (CARDS)
+========================= */
+#listaLibros{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.card{
+    background: white;
+    padding: 15px;     
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: 0.2s;
+}
+
+.card:hover{
+    transform: scale(1.02);
+}
+
+/* BOTONES DENTRO DE CARDS */
+.card button{
+    width: auto;
+    padding: 6px 10px;
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+/* EDITAR */
+.card button:first-of-type{
+    background: #f0ad4e;
+}
+
+.card button:first-of-type:hover{
+    background: #d8922d;
+}
+
+/* ELIMINAR */
+.card button:last-of-type{
+    background: #d9534f;
+}
+
+.card button:last-of-type:hover{
+    background: #b52b27;
+}
